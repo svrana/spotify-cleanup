@@ -1,0 +1,8 @@
+[package]
+name = "spotify-cleanup"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.88"
+regex = "1.10.6"
