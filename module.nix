@@ -45,8 +45,6 @@ in
       Service = {
         Type = "oneshot";
         ExecStart = "${cfg.package}/bin/spotify-cleanup";
-        Restart = "always";
-        RestartSec = 10;
       };
     };
 

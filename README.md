@@ -20,7 +20,7 @@ Add the following snippet to your flake inputs:
 spotify-cleanup = {
     url = "github:svrana/spotify-cleanup";
     inputs.nixpkgs.follows = "nixpkgs";
-}
+};
 ```
 
 #### Using the Home Manager module (recommended)
@@ -38,7 +38,7 @@ services.spotify-cleanup = {
     enable = true;
     systemdTarget = "sway-session.target";
     interval = "30m";
-}
+};
 ```
 
 This method will install the program and setup a user systemd service.
