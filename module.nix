@@ -36,7 +36,7 @@ in
   config = mkIf cfg.enable {
     systemd.user.services.spotify-cleanup = {
       Unit = {
-        Description = "Cleanup Spotify's leaked pulse objects";
+        Description = "Cleanup Spotify's leaked pipewire-pulse clients";
         Documentation = "https://github.com/svrana/spotify-cleanup";
       };
 
@@ -49,13 +49,14 @@ in
     };
 
     systemd.user.timers.spotify-cleanup = {
-      Unit.Description = "Cleanup Spotify's leaked pulse objects";
+      Unit.Description = "Cleanup Spotify's leaked pipewire-pulse clients";
       Timer = {
         Unit = "spotify-cleanup";
         OnBootSec = cfg.interval;
         OnUnitActiveSec = cfg.interval;
       };
-      Install.WantedBy = [ "timers.target" ];
+
+      Install.WantedBy = [ cfg.systemdTarget ];
     };
   };
 }
