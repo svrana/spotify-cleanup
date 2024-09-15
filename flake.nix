@@ -23,9 +23,13 @@
           [
             pkgs.rustc
             pkgs.cargo
+            pkgs.clang
             pkgs.clippy
-            pkgs.bashInteractive
+            pkgs.rustc
+            pkgs.pkg-config
+            pkgs.pipewire
           ];
+          LIBCLANG_PATH = "${pkgs.libclang.lib}/lib";
         };
 
         packages.spotify-cleanup = pkgs.callPackage ./default.nix { };
