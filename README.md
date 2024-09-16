@@ -10,7 +10,7 @@ will prevent new clients from connecting and cause problems like your audio not 
 volume control broken, etc. While I believe this to be a problem for both pulseaudio and
 pipewire-pulse audio systems, this solution works only for pipewire as that's what I use
 and was more interested in learning a bit about how to interact with it than I was about
-pulseaudio. If you're not using pulseaudio, you may check out this script posted [here](https://community.spotify.com/t5/Desktop-Linux/Spotify-1-1-10-leak-Pulse-Audio-connections/td-p/4847381)
+pulseaudio. If you're not using pulseaudio, you may check out this script posted [here](https://community.spotify.com/t5/Desktop-Linux/Spotify-opens-too-many-connections-to-PulseAudio-Linux/m-p/5369848#M21001-)
 in a user comment.
 
 
