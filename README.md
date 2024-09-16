@@ -4,7 +4,15 @@ Destroys the leaked pipewire-pulse clients by the Spotify application on Linux.
 
 ## Why?
 
-Spotify leaks pipewire-pulse clients like its going out of style. If unchecked, the leaked pipewire-pulse objects prevent new pipewire-pulse clients from connecting to pipewire's pulse server breaking expected behavior. This is annoying.
+Spotify leaks its pulse clients. This seems to happen when its syncing state with another
+version of spotify running on your phone, car, etc. If unchecked, these leaked clients
+will prevent new clients from connecting and cause problems like your audio not working,
+volume control broken, etc. While I believe this to be a problem for both pulseaudio and
+pipewire-pulse audio systems, this solution works only for pipewire as that's what I use
+and was more interested in learning a bit about how to interact with it than I was about
+pulseaudio. If you're not using pulseaudio, you may check out this script posted [here](https://community.spotify.com/t5/Desktop-Linux/Spotify-1-1-10-leak-Pulse-Audio-connections/td-p/4847381)
+in a user comment.
+
 
 ## How?
 
