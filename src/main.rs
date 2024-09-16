@@ -58,9 +58,9 @@ pub fn main() {
     }
 
     // sort so we drop the last one
-    objects.sort_by_key(|o| o.client_id.clone());
+    objects.sort_by_key(|o| o.client_id);
 
-    if objects.len() > 0 {
+    if !objects.is_empty() {
         println!("skipping the last spotify client");
         objects.pop();
     }
