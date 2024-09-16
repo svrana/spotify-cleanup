@@ -56,12 +56,11 @@ pub fn main() {
         }
     }
 
-    // sort so we drop the last one
-    objects.sort_by_key(|o| o.client_id);
-
-    if !objects.is_empty() {
-        println!("skipping the last spotify client");
-        objects.pop();
+    // not sure what order these are in, but not by object id... seem to be ordered such
+    // that the last mentioned one is the one "active" by spotify, such that if you
+    // were to destroy it, sound would be lost to spotify
+    if let Some(obj) = objects.pop() {
+        println!("skipping the last spotify client: {}", obj.client_id);
     }
 
     for obj in objects {
