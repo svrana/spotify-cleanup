@@ -1,7 +1,7 @@
 use std::sync::mpsc;
+use std::{cell::Cell, rc::Rc};
 
 use pipewire as pw;
-use std::{cell::Cell, rc::Rc};
 
 #[derive(Clone, Debug)]
 pub struct Object {
