@@ -29,8 +29,7 @@ pub fn main() {
         .global(move |global| {
             let mut app_name = "";
             if let Some(props) = global.props {
-                // Check that the global is a factory that creates the right type.
-                if let Some(_appname) = props.get("application.name") {
+                if props.get("application.name").is_some() {
                     app_name = props
                         .get("application.name")
                         .expect("expected application name");
