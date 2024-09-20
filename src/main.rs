@@ -41,7 +41,7 @@ pub fn main() {
                 pw_type: global.type_.to_string(),
                 app_name: app_name.to_string(),
             };
-            sender.send(obj).expect("failed to send")
+            sender.send(obj).expect("failed to send");
         })
         .register();
 
