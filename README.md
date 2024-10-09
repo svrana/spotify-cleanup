@@ -44,7 +44,7 @@ And then you may use the option to set it up, for example:
 ```nix
 services.spotify-cleanup = {
     enable = true;
-    systemdTarget = "sway-session.target";
+    systemdTarget = "graphical-session.target";
     interval = "30m";
 };
 ```
